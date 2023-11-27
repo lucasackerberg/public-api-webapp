@@ -2,6 +2,7 @@
     --background-darkgrey: rgb(90, 91, 93);
     --black: black;
     --textWhite: white;
+    --background-blue: #000a14;
 }
 
 * {
@@ -10,20 +11,44 @@
 
 body {
     color: var(--textWhite);
-    background-color: var(--black);
+    background-color: var(--background-blue);
     margin: 0;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    background-color: var(--black);
+    background-color: var(--background-blue);
+    gap: 150px;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    height:150px;
+    padding: 0 20px 0 20px;
+}
+
+header h1 {
+    padding-left: 20px;
+    font-family: 'MedievalSharp', cursive;
+}
+
+.headerimage {
+    height: 150px;
+    width:150px;
+}
+
+header .headerimage {
+    background-image: url('assets/images/levellunacyblue.jpg');
+    background-size: cover;
+}
+
+
 .gamewrapper {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -54,12 +79,16 @@ body {
 
 .game h3,
 .game p {
-    display: none;
+    font-size: 0;
+    max-height: 0; /* Initially set max-height to 0 */
+    overflow: hidden; /* Hide the content */
+    transition: max-height 1s ease, max-width 1s ease; /* Add a smooth transition effect for max-height and max-width */
 }
 
 .game:hover h3,
 .game:hover p {
-    display: block; /* Show the content when the game is hovered */
+    max-height: 1000px; /* Set a sufficiently large max-height to accommodate content */
+    font-size: 20px;
 }
 
 
@@ -67,3 +96,26 @@ body {
     display:block;
 }
 
+.randomCWrapper {
+    display:flex;
+    height: 80vh;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.formWrapper {
+    display:flex;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 300px;
+}
+
+.smallerGame {
+    height:475px;
+    width: 400px;
+}

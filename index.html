@@ -4,19 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>MMO Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Space+Grotesk&display=swap" rel="stylesheet">
+    <title>LevelLunacy - Everything MMO Games</title>
 </head>
 <body>
     <header>
-        <h1>title of site osv</h1>
+        <div class="headerimage"></div>
+        <h1>LevelLunacy</h1>
     </header>
     <div class="wrapper">
-        <h2>Six MMO games released in the last year!</h2>
+        
+        <h2>The six most recently released MMO games</h2>
         <div class="gamewrapper">
             <div class="gamesList" id="gamesList">
             </div>
             <div class="gamesListTwo" id="gamesListTwo"></div>
         </div>
+        <div class="formWrapper" id="formWrapper">
+            <h3>Choose your platform and genre as you wish and maybe you could find some new gems!</h3>
+                <select name="gameGenres" id="gameGenres">
+                    <option value="shooter">Shooter</option>
+                    <option value="mmorpg">MMO-RPG</option>
+                    <option value="sports">Sports</option>
+                    <option value="strategy">Strategy</option>
+                    <option value="racing">Racing</option>
+                    <option value="moba">MOBA</option>
+                    <option value="sandbox">Sandbox</option>
+                </select>
+                <select name="platform" id="platform">
+                    <option value="pc">PC</option>
+                    <option value="browser">Browser</option>
+                    <option value="all">All</option>
+                </select>
+        </div>
+        <div class="randomCWrapper" id="randomCWrapper"></div>
     </div>
     <script src="script.js"></script>
 </body>
