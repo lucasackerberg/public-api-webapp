@@ -2,7 +2,9 @@
     --background-darkgrey: rgb(90, 91, 93);
     --black: black;
     --textWhite: white;
-    --background-blue: #000a14;
+    --background-blue: #151829;
+    --creamtext: #fefcd3;
+    --ferrarired: #f80338;
 }
 
 * {
@@ -15,25 +17,60 @@ body {
     margin: 0;
 }
 
+body h1, h2, h3 {
+    font-family: 'Nova Square', sans-serif;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
     background-color: var(--background-blue);
-    gap: 150px;
+    gap: 50px;
+}
+
+.wrapper h3 {
+    text-align: center;
+}
+
+.wrapper h2 {
+    font-family: 'Nova Square';
+    color: var(--creamtext); /* Blue color, you can adjust this to match your app's color scheme */
+    padding-bottom: 5px; /* Space between text and underline */
+    margin-bottom: 15px; /* Space between elements */
+    text-align: center;
 }
 
 header {
     display: flex;
     align-items: center;
     height:150px;
-    padding: 0 20px 0 20px;
+    padding: 20px 20px 0 20px;
+    justify-content: space-between;
+}
+
+.headerIcons {
+    display: flex;
+    gap: 15px;
+}
+
+.fa-solid {
+    font-size: 30px;
+    color:var(--creamtext);
+}
+
+.fa-solid:hover {
+    color:var(--ferrarired);
+    text-shadow: black -2px 1px;
 }
 
 header h1 {
-    padding-left: 20px;
     font-family: 'MedievalSharp', cursive;
+    font-size: 50px;
+    font-weight: 800;
+    -webkit-text-stroke: 1px #ff0000;
+    -webkit-text-fill-color: #c74343;
 }
 
 .headerimage {
@@ -42,7 +79,7 @@ header h1 {
 }
 
 header .headerimage {
-    background-image: url('assets/images/levellunacyblue.jpg');
+    background-image: url('assets/images/levellunacylogored.jpg');
     background-size: cover;
 }
 
@@ -59,6 +96,10 @@ header .headerimage {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
+}
+.gamesList h3{
+    width:100%;
+    color: var(--creamtext);
 }
 
 .gamesListTwo {
@@ -89,6 +130,7 @@ header .headerimage {
 .game:hover p {
     max-height: 1000px; /* Set a sufficiently large max-height to accommodate content */
     font-size: 20px;
+    font-family: 'Nova Square', sans-serif;
 }
 
 
@@ -115,7 +157,239 @@ header .headerimage {
     margin-top: 300px;
 }
 
+.formWrapper h3 {
+    color: var(--textWhite);
+}
+
 .smallerGame {
     height:475px;
     width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 475px;
+    width: 400px;
+    border: 2px solid var(--creamtext);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
 }
+
+.selectwrapper {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.gameGenresWrapper {
+    display:flex;
+    position: relative;
+    min-width: 250px;
+    height: 50px;
+}
+
+.gameGenresWrapper .icon-container {
+    width:50px;
+    height: 100%;
+    position: absolute;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 0, 0);
+    border-radius: 20px;
+}
+
+.icon-container i {
+    font-size: 30px;
+    color: var(--creamtext);
+}
+
+.platformWrapper {
+    display:flex;
+    position: relative;
+    min-width: 250px;
+    height: 50px;
+}
+
+.platformWrapper .icon-container {
+    width:50px;
+    height: 100%;
+    position: absolute;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 0, 0);
+    border-radius: 20px;
+}
+
+.gameGenres {
+    border: none;
+    appearance: none;
+    padding: 0 30px 0 15px;
+    width:100%;
+    color: white;
+    background-color: rgb(177, 15, 15);
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.platform {
+    border: none;
+    appearance: none;
+    padding: 0 30px 0 15px;
+    width:100%;
+    color: white;
+    background-color: rgb(177, 15, 15);
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.smallerGame img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid var(--creamtext);
+}
+
+.smallerGame h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.smallerGame p {
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 0 20px 0 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+@media (min-width: 1050px) {
+    .formWrapper{
+        margin-top: 400px;
+    }
+}
+
+@media (min-width: 1150px) {
+    .formWrapper{
+        margin-top: 600px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .formWrapper{
+        margin-top: 800px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .formWrapper{
+        margin-top:150px;
+    }   
+
+    .formWrapper h3{
+        width:80%;
+        height: 70px;
+    }
+}
+
+@media (max-width: 675px) {
+
+    .selectwrapper{
+        gap:60px;
+    }
+
+    .platform {
+        width:100%;
+        padding: 0 20px 0 15px;
+    }
+
+    .gameGenres {
+        width:100%;
+        padding: 0 20px 0 15px;
+    }
+
+    .gameGenresWrapper {
+        min-width:150px;
+
+    }
+
+    .platformWrapper {
+        min-width:150px;
+    }
+
+    .headerimage {
+        height: 100px;
+        width:100px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .fa-solid {
+        font-size:20px;
+    }
+
+    .game:hover p {
+        font-size: 12px;
+    }
+
+    .game:hover h3 {
+        font-size: 18px;
+    }
+
+    .formWrapper h3{
+        width:80%;
+        height: 70px;
+    }
+
+    .formWrapper{
+        margin-top:50px;
+    }
+  }
+
+  @media (max-width: 450px) {
+
+    .gamewrapper{
+        height: 55vh;
+    }
+
+    .formWrapper{
+        margin-top:80px;
+    }
+
+    .wrapper h2{
+        font-size: 17px;
+    }
+
+    header {
+        height:auto;
+    }
+
+    .headerimage {
+        height: 50px;
+        width: 50px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .fa-solid {
+        font-size:12px;
+    }
+
+    .game:hover p {
+        font-size: 12px;
+    }
+
+    .game:hover h3 {
+        font-size: 18px;
+    }
+
+    .wrapper .randomCWrapper  p {
+        font-size: 15px;
+    }
+  }

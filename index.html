@@ -7,37 +7,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Space+Grotesk&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Nova+Square&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7ca45ddd8f.js" crossorigin="anonymous"></script>
     <title>LevelLunacy - Everything MMO Games</title>
 </head>
 <body>
     <header>
         <div class="headerimage"></div>
-        <h1>LevelLunacy</h1>
+        <h1>LEVEL LUNACY</h1>
+        <div class="headerIcons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-burger"></i>
+
+        </div>
     </header>
     <div class="wrapper">
-        
-        <h2>The six most recently released MMO games</h2>
+        <h2>Find your next MMO</h2>
         <div class="gamewrapper">
             <div class="gamesList" id="gamesList">
+                <h3>The six newest MMOS released!</h3>
             </div>
             <div class="gamesListTwo" id="gamesListTwo"></div>
         </div>
         <div class="formWrapper" id="formWrapper">
             <h3>Choose your platform and genre as you wish and maybe you could find some new gems!</h3>
-                <select name="gameGenres" id="gameGenres">
-                    <option value="shooter">Shooter</option>
-                    <option value="mmorpg">MMO-RPG</option>
-                    <option value="sports">Sports</option>
-                    <option value="strategy">Strategy</option>
-                    <option value="racing">Racing</option>
-                    <option value="moba">MOBA</option>
-                    <option value="sandbox">Sandbox</option>
-                </select>
-                <select name="platform" id="platform">
-                    <option value="pc">PC</option>
-                    <option value="browser">Browser</option>
-                    <option value="all">All</option>
-                </select>
+            <div class="selectwrapper">
+                <div class="gameGenresWrapper">
+                    <select name="gameGenres" id="gameGenres" class="gameGenres">
+                        <option value="shooter">Shooter</option>
+                        <option value="mmorpg">MMO-RPG <i class="fa-solid fa-dragon"></i></option>
+                        <option value="sports">Sports</option>
+                        <option value="strategy">Strategy</option>
+                        <option value="racing">Racing</option>
+                        <option value="moba">MOBA</option>
+                        <option value="sandbox">Sandbox</option>
+                    </select>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+                <div class="platformWrapper">
+                    <select name="platform" id="platform" class="platform">
+                        <option value="pc">PC</option>
+                        <option value="browser">Browser</option>
+                        <option value="all">All</option>
+                    </select>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>      
+                </div>
+            </div>
         </div>
         <div class="randomCWrapper" id="randomCWrapper"></div>
     </div>
