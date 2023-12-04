@@ -60,14 +60,14 @@ const writeOut = (mmoData) => {
     firstThreeGames.forEach((game) => {
         const gameElement = document.createElement('div');
         gameElement.classList.add('game');
-        gameElement.innerHTML = `<img src="${game.thumbnail}" alt="A picture of the game"> <h3>${game.title}</h3> <p>${game.short_description}</p> <p>Release Date: ${game.release_date}</p>`;
+        gameElement.innerHTML = `<img src="${game.thumbnail}" alt="A picture of the game"> <h3>${game.title}</h3> <p>${game.short_description}</p> <p> Category: ${game.genre}</p> <p>Release Date: ${game.release_date}</p>`;
         gamesList.appendChild(gameElement);
     });
 
     threeToSixGames.forEach((game) => {
         const gameElement = document.createElement('div');
         gameElement.classList.add('game');
-        gameElement.innerHTML = `<img src="${game.thumbnail}" alt="A picture of the game"> <h3>${game.title}</h3> <p>${game.short_description}</p> <p>Release Date: ${game.release_date}</p>`;
+        gameElement.innerHTML = `<img src="${game.thumbnail}" alt="A picture of the game"> <h3>${game.title}</h3> <p>${game.short_description}</p> <p> Category: ${game.genre}</p> <p>Release Date: ${game.release_date}</p>`;
         gamesListTwo.appendChild(gameElement);
     });
 }
@@ -80,7 +80,7 @@ const WriteOutGamesByPlatformAndGenre = (CatMmoData) => {
     CatMmoData.forEach((catGame) => {
         const smallerGame = document.createElement('div');
         smallerGame.classList.add('smallerGame');
-        smallerGame.innerHTML = `<img src="${catGame.thumbnail}" alt="A picture of the game"> <h3>${catGame.title}</h3> <p>${catGame.short_description}</p> <p>Release Date: ${catGame.release_date}</p>`;
+        smallerGame.innerHTML = `<img src="${catGame.thumbnail}" alt="A picture of the game"> <h3>${catGame.title}</h3> <p>${catGame.short_description}</p> <p>Category: ${catGame.genre}</p> <p>Release Date: ${catGame.release_date}</p>`;
         smallerGameWrapper.appendChild(smallerGame);
     });
 }

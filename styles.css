@@ -121,14 +121,14 @@ header .headerimage {
 .game h3,
 .game p {
     font-size: 0;
-    max-height: 0; /* Initially set max-height to 0 */
-    overflow: hidden; /* Hide the content */
-    transition: max-height 1s ease, max-width 1s ease; /* Add a smooth transition effect for max-height and max-width */
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 1s ease, max-width 1s ease;
 }
 
 .game:hover h3,
 .game:hover p {
-    max-height: 1000px; /* Set a sufficiently large max-height to accommodate content */
+    max-height: 1000px;
     font-size: 20px;
     font-family: 'Nova Square', sans-serif;
 }
@@ -146,6 +146,7 @@ header .headerimage {
     flex-wrap: wrap;
     padding-left: 20px;
     padding-right: 20px;
+    gap: 30px;
 }
 
 .formWrapper {
@@ -162,13 +163,11 @@ header .headerimage {
 }
 
 .smallerGame {
-    height:475px;
+    height:500px;
     width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 475px;
-    width: 400px;
     border: 2px solid var(--creamtext);
     border-radius: 8px;
     overflow: hidden;
@@ -285,7 +284,7 @@ header .headerimage {
 @media (max-width: 850px) {
 
     .formWrapper{
-        margin-top:150px;
+        margin-top:300px;
     }   
 
     .formWrapper h3{
@@ -352,6 +351,14 @@ header .headerimage {
 
   @media (max-width: 450px) {
 
+    .gameGenres {
+        font-size: 16px;
+    }
+
+    .platform {
+        font-size: 16px;
+    }
+
     .gamewrapper{
         height: 55vh;
     }
@@ -391,5 +398,29 @@ header .headerimage {
 
     .wrapper .randomCWrapper  p {
         font-size: 15px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .selectwrapper {
+        gap:40px;
+    }
+
+    .gameGenres {
+        font-size: 14px;
+    }
+
+    .platform {
+        font-size: 14px;
+    }
+
+    .platformWrapper {
+        min-width: 125px;
+        height: 40px;
+    }
+
+    .gameGenresWrapper {
+        min-width: 125px;
+        height: 40px;
     }
   }
